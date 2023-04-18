@@ -11,6 +11,10 @@ namespace HTMLtoPDF.Controllers
             return View();
         }
 
+        // Vista que se va a convertir en pdf
+        // nuget rotativa aspnetcore
+        // colocar carpeta rotativa en wwwroot
+        // modificar Program.cs
         public Task<IActionResult> GenerarPDF()
         {
             List<Carros> carro = new List<Carros>()
@@ -22,7 +26,7 @@ namespace HTMLtoPDF.Controllers
 
             return Task.FromResult<IActionResult>(new ViewAsPdf("GenerarPDF", carro)
             {
-                FileName = $"HTMLtoPDF.pdf",
+                FileName = $"HTMLtoPDF.pdf", // nombre del documento
                 PageOrientation = Rotativa.AspNetCore.Options.Orientation.Portrait,
                 PageSize = Rotativa.AspNetCore.Options.Size.A4
             });
