@@ -1,0 +1,94 @@
+﻿@model List<Carros>
+@{
+	Layout = null;
+}
+
+<DOCTYPE html>
+
+	<table style="width:100%">
+		<tbody>
+			<tr>
+				<td style="width:20%"><img alt="logo" src="https://supermercadosnacional.com/media/catalog/product/placeholder/default/IMG_NO_DISPONIBLE_1.png" /></td>
+				<td style="vertical-align:top; width:60%">
+					<table style="width:704px">
+						<tbody>
+							<tr>
+								<td style="width:692px">
+									<h4 style="margin-left:0px; margin-right:0px; text-align:center"><strong>HTMLtoPDF</strong></h4>
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; width:692px">XXXXXXXXXXXXXXXXXXXXXXXXX</td>
+							</tr>
+							<tr>
+								<td style="text-align:center; width:692px">XXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td style="width:20%">&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="3">&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table style="width:100%">
+						<tbody>
+							<tr>
+								<td colspan="1" style="width:20%">XXXXXXXXXXXXXXXXXXXXXXXXX</td>
+								<td colspan="3" style="border-bottom:1px solid black; width:80%">XXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table style="width:100%">
+						<tbody>
+							<tr>
+								<td style="width:20%">Documento:</td>
+								<td style="border-bottom:1px solid black; width:30%">XXXXXXXXXXXXXXXXXXXX</td>
+								<td style="width:10%">XXXXXXXXXXXXXXXX</td>
+								<td style="border-bottom:1px solid black; width:40%">XXXXXXXXXXXXXXXXXXXXX</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="3">&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<table class="tbproductos" style="width:100%">
+						<thead>
+							<tr>
+								<th class="tbth">xxxxxxxxxxxxxx</th>
+								<th class="tbth">xxxxxxxxxxxxxx</th>
+								<th class="tbth" style="width:130px">xxxxxxxxxxxxxx</th>
+								<th class="tbth" style="width:130px">xxxxxxxxxxxxxx</th>
+								<th class="tbth" style="width:130px">xxxxxxxxxxxxxx</th>
+
+							</tr>
+						</thead>
+
+						<tbody>
+							@{
+								foreach (Carros item in Model)
+								{
+									<tr>
+										<td class="td-item"><p class="item">@item.Placa</p></td>
+										<td class="td-item"><p class="item">@item.Marca</p></td>
+										<td class="td-item"><p class="item">@item.Modelo</p></td>
+										<td class="td-item"><p class="item">@item.Color</p></td>
+										<td class="td-item"><p class="item">@item.Tipo</p></td>
+									</tr>
+								}
+							}
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</DOCTYPE>
